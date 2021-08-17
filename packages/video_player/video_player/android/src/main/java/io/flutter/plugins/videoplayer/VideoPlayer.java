@@ -76,15 +76,24 @@ final class VideoPlayer {
 
     DataSource.Factory dataSourceFactory;
     if (isHTTP(uri)) {
-      DefaultHttpDataSource.Factory httpDataSourceFactory =
-          new DefaultHttpDataSource.Factory()
-              .setUserAgent("ExoPlayer")
-              .setAllowCrossProtocolRedirects(true);
-
+//      DefaultHttpDataSource.Factory httpDataSourceFactory =
+//          new DefaultHttpDataSource.Factory()
+//              .setUserAgent("ExoPlayer")
+//              .setAllowCrossProtocolRedirects(true);
+//
+//      if (httpHeaders != null && !httpHeaders.isEmpty()) {
+//        httpDataSourceFactory.setDefaultRequestProperties(httpHeaders);
+//      }
+//      dataSourceFactory = httpDataSourceFactory;
+      CacheDataSourceFactory cacheDataSourceFactory =
+              new CacheDataSourceFactory(
+                      context,
+                      1024*1024*1024,
+                      1024*1024*100);
       if (httpHeaders != null && !httpHeaders.isEmpty()) {
-        httpDataSourceFactory.setDefaultRequestProperties(httpHeaders);
+        cacheDataSourceFactory.setHeaders(httpHeaders);
       }
-      dataSourceFactory = httpDataSourceFactory;
+      dataSourceFactory = cacheDataSourceFactory;
     } else {
       dataSourceFactory = new DefaultDataSourceFactory(context, "ExoPlayer");
     }
