@@ -44,8 +44,7 @@ class CacheDataSourceFactory implements DataSource.Factory {
 //        defaultHttpDataSourceFactory.getDefaultRequestProperties().set(httpHeaders);
         defaultHttpDataSourceFactory.setDefaultRequestProperties(httpHeaders);
     }
-
-    @NonNull
+    
     @Override
     public DataSource createDataSource() {
         DefaultBandwidthMeter bandwidthMeter = new DefaultBandwidthMeter.Builder(context).build();
