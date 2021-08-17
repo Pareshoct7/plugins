@@ -26,6 +26,7 @@ class CacheDataSourceFactory implements DataSource.Factory {
         this.context = context;
         this.maxCacheSize = maxCacheSize;
         this.maxFileSize = maxFileSize;
+//        Removed deprecated code
 //        defaultHttpDataSourceFactory = new DefaultHttpDataSourceFactory("ExoPlayer",
 //                null,
 //                DefaultHttpDataSource.DEFAULT_CONNECT_TIMEOUT_MILLIS,
