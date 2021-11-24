@@ -1,6 +1,12 @@
 ## NEXT
 
+* Updates compileSdkVersion to 31.
+
+## 2.0.3
+
 * Remove references to the Android V1 embedding.
+* Updated Android lint settings.
+* Started using Background Platform Channels when available.
 
 ## 2.0.2
 

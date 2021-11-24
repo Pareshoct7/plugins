@@ -1,3 +1,33 @@
+## NEXT
+
+* Moves Android and iOS implementations to federated packages.
+
+## 6.0.15
+
+* Updates README:
+  * Improves organization.
+  * Clarifies how `canLaunch` should be used.
+* Updates example application to demonstrate intended use of `canLaunch`.
+
+## 6.0.14
+
+* Updates readme to indicate that sending SMS messages on Android 11 requires to add a query to AndroidManifest.xml.
+* Fixes integration tests.
+* Updates example app Android compileSdkVersion to 31.
+
+## 6.0.13
+
+* Fixed extracting browser headers when they are null error.
+
+## 6.0.12
+
+* Fixed an error where 'launch' method of url_launcher would cause an error if the provided URL was not valid by RFC 3986.
+
+## 6.0.11
+
+* Update minimum Flutter SDK to 2.5 and iOS deployment target to 9.0.
+* Updated Android lint settings.
+
 ## 6.0.10
 
 * Remove references to the Android v1 embedding.

@@ -22,13 +22,14 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 16
     }
     lintOptions {
         disable 'InvalidPackage'
+        disable 'GradleDependency'
     }
 
 

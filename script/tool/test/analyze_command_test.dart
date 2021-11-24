@@ -211,7 +211,7 @@ void main() {
     createFakePlugin('foo', packagesDir);
 
     processRunner.mockProcessesForExecutable['flutter'] = <io.Process>[
-      MockProcess.failing() // flutter packages get
+      MockProcess(exitCode: 1) // flutter packages get
     ];
 
     Error? commandError;
@@ -233,7 +233,7 @@ void main() {
     createFakePlugin('foo', packagesDir);
 
     processRunner.mockProcessesForExecutable['dart'] = <io.Process>[
-      MockProcess.failing() // dart analyze
+      MockProcess(exitCode: 1) // dart analyze
     ];
 
     Error? commandError;
@@ -253,7 +253,7 @@ void main() {
   });
 
   // Ensure that the command used to analyze flutter/plugins in the Dart repo:
-  // https://github.com/dart-lang/sdk/blob/master/tools/bots/flutter/analyze_flutter_plugins.sh
+  // https://github.com/dart-lang/sdk/blob/main/tools/bots/flutter/analyze_flutter_plugins.sh
   // continues to work.
   //
   // DO NOT remove or modify this test without a coordination plan in place to

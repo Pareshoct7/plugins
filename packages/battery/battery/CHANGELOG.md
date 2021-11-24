@@ -1,6 +1,9 @@
 ## NEXT
 
 * Remove references to the Android v1 embedding.
+* Updated Android lint settings.
+* Updates compileSdkVersion to 31.
+* Recreated Android example from current template.
 
 ## 2.0.3
 

@@ -1,3 +1,23 @@
+## NEXT
+
+* Fixes integration tests.
+* Updates example app Android compileSdkVersion to 31.
+
+* **BREAKING CHANGES**:
+  * Renames `in_app_purchase_ios` to `in_app_purchase_storekit`.
+  * Renames `InAppPurchaseIosPlatform` to `InAppPurchaseStoreKitPlatform`.
+  * Renames `InAppPurchaseIosPlatformAddition` to
+    `InAppPurchaseStoreKitPlatformAddition`.
+
+## 1.0.9
+
+* Handle purchases with `PurchaseStatus.restored` correctly in the example App.
+* Updated dependencies on `in_app_purchase_android` and `in_app_purchase_ios` to their latest versions (version 0.1.5 and 0.1.3+5 respectively).
+
+## 1.0.8
+
+* Fix repository link in pubspec.yaml.
+
 ## 1.0.7
 
 * Remove references to the Android V1 embedding.
